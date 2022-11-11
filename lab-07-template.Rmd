@@ -108,9 +108,10 @@ At a glance it appears random but there seems to be some sort of substructure to
 ### Exercise 9
 
 ```{r fit-score_rank_fit}
-# fit model 
-
-# tidy model output
+score_rank_fit <- linear_reg() %>%
+  set_engine("lm") %>%
+  fit(score ~ rank, data = evals) 
+  tidy(score_rank_fit)
 ```
 
 *Add your narrative here.*
@@ -118,9 +119,10 @@ At a glance it appears random but there seems to be some sort of substructure to
 ### Exercise 10
 
 ```{r fit-score_gender_fit}
-# fit model
-
-# tidy model output
+score_gender_fit <- linear_reg() %>%
+  set_engine("lm") %>%
+  fit(score ~ gender, data = evals)
+ tidy(score_gender_fit)
 ```
 
 ```{r score_gender_intercept, echo = FALSE, eval = FALSE}
