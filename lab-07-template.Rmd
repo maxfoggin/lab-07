@@ -53,24 +53,25 @@ The first plot is misleading because there's points on top of each other - we ca
 
 ### Exercise 3
 
-```{r fit-score_bty_fit, eval = FALSE}
+```{r fit-score_bty_fit, eval = TRUE}
 # remove eval = FALSE from the code chunk options after filling in the blanks
 score_bty_fit <- linear_reg() %>%
   set_engine("lm") %>%
   fit(score ~ bty_avg, data = evals)
 ```
 
-```{r tidy-score_bty_fit, eval = FALSE}
+```{r tidy-score_bty_fit, eval = TRUE}
 # remove eval = FALSE from the code chunk options after filling in the blanks
 tidy(score_bty_fit)
 ```
 
-*Add your linear model here. Don't worry too much about notation, you can use things like score-hat.*
+score = bty_avg*0.06663704 + 3.88033795
 
 ### Exercise 4
 
 ```{r viz-score_bty_fit}
-# add your code here
+plot_geom_jitter +
+  geom_smooth(method = "lm", se = FALSE, colour = "orange")
 ```
 
 ### Exercise 5
