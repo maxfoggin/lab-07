@@ -28,10 +28,13 @@ evals<-read.csv("data/evals.csv", row.names=1)
 ### Exercise 1
 
 ```{r viz-score}
-# add code here
+ggplot(data = evals, mapping = aes(x = score))+
+  geom_histogram()
+
+summarise(evals, mean(score))
 ```
 
-*Add your narrative here.*
+The data is right skewed since the mean is 4.17. Students on average rate courses highly, this is perhaps slightly higher but not unusual.
 
 ### Exercise 2
 
