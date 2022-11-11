@@ -1,6 +1,6 @@
 ---
 title: "Lab 07 - Modelling course evaluations"
-author: [TEAM NAME]
+author: [firefox-official]
 output: 
   tufte::tufte_html:
     css: ../lab.css
@@ -12,7 +12,7 @@ link-citations: yes
 
 ### Load packages 
 
-```{r load-packages, message=FALSE}
+```{r load-packages, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(tidymodels)
 library(patchwork)
@@ -38,21 +38,18 @@ The data is right skewed since the mean is 4.17. Students on average rate course
 
 ### Exercise 2
 
-```{r viz-score-bty, eval = FALSE}
-# add the code for each plot and assign them to the names as outlined below
-# remove eval = FALSE from the code chunk options
-# knit the document, and you'll see them appear next to each other
-# this uses the patchwork package loaded above
-# learn more about patchwork at https://patchwork.data-imaginist.com/
-# it might be useful for your presentations!
-plot_geom_point  <- ggplot(___)
+```{r viz-score-bty, eval = TRUE}
 
-plot_geom_jitter <- ggplot(___)
+plot_geom_point  <- ggplot(data = evals, mapping = aes(x = bty_avg, y = score))+
+  geom_point()
+
+plot_geom_jitter <- ggplot(data = evals, mapping = aes(x = bty_avg, y = score))+
+  geom_jitter()
 
 plot_geom_point + plot_geom_jitter
 ```
 
-*Add your narrative here.*
+The first plot is misleading because there's points on top of each other - we can see on the second plot that there's a lot of points clumping and overlapping. 
 
 ### Exercise 3
 
