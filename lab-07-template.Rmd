@@ -76,11 +76,11 @@ plot_geom_jitter +
 
 ### Exercise 5
 
-*Add interpretation of intercept here.*
+For each additional point the  is bty_avg is higher, the score is expected to be higher, on average,  by 0.06663704. 
 
 ### Exercise 6
 
-*Add interpretation of intercept here.*
+For a bty_score of 0, the score is expected , on average, to be 3.88033795.
 
 ### Exercise 7
 
