@@ -108,7 +108,7 @@ At a glance it appears random but there seems to be some sort of substructure to
 ### Exercise 9
 
 ```{r fit-score_rank_fit}
-# fit model
+# fit model 
 
 # tidy model output
 ```
