@@ -86,10 +86,10 @@ For a bty_score of 0, the score is expected , on average, to be 3.88033795.
 
 ```{r glance-score_bty_fit, eval = FALSE}
 # remove eval = FALSE from the code chunk options after filling in the blanks
-glance(___)
+glance(score_bty_fit)
 ```
 
-*Add interpretation of R-squared here.*
+3.5 percent of the variability in score can be explained by the regression model. this model is not very useful for interpreting our response variable as the r squared value is too low. 
 
 ### Exercise 8
 
